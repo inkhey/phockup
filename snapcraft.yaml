@@ -8,7 +8,6 @@ description: |
   Media sorting tool to organize photos and videos from your camera in folders by year, month and day.
   The software will collect all files from the input directory and copy them to the output directory without
   changing the files content. It will only rename the files and place them in the proper directory for year, month and day.
-
 apps:
   phockup:
     command: phockup.sh
@@ -20,7 +19,7 @@ parts:
     source: .
     override-pull: |
       snapcraftctl pull
-      snapcraftctl set-version `cat phockup.py | grep '__version__ = ' | sed "s/.*'\(.*\)'/\1/"`
+      snapcraftctl set-version `cat pyproject.toml | grep 'version = ' | sed "s/.*'\(.*\)'/\1/"`
 
   files:
     plugin: dump

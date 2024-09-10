@@ -2,7 +2,7 @@
 import os
 from subprocess import CalledProcessError
 
-from src.exif import Exif
+from phockup.internal.exif import Exif
 
 os.chdir(os.path.dirname(__file__))
 

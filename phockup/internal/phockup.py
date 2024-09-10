@@ -10,8 +10,8 @@ import time
 
 from tqdm import tqdm
 
-from src.date import Date
-from src.exif import Exif
+from phockup.internal.date import Date
+from phockup.internal.exif import Exif
 
 logger = logging.getLogger('phockup')
 ignored_files = ('.DS_Store', 'Thumbs.db')

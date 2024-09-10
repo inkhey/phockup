@@ -16,6 +16,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.1
       - name: Install dependencies
-        run: pip install -r requirements-dev.txt
+        run: pip install -r requirements.lock
+      - name: Install dev dependencies
+        run: pip install -r requirements-dev.lock
       - name: Run pre-commit
         run: pre-commit run -a

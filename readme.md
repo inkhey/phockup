@@ -67,7 +67,7 @@ curl -L https://github.com/ivandokov/phockup/archive/latest.tar.gz -o phockup.ta
 tar -zxf phockup.tar.gz
 sudo mv phockup-* /opt/phockup
 cd /opt/phockup
-pip3 install -r requirements.txt
+pip3 install -r requirements.lock
 sudo ln -s /opt/phockup/phockup.py /usr/local/bin/phockup
 ```
 
@@ -328,11 +328,33 @@ operations to complete before shutting down.
 
 ## Development
 
-### Running tests
+### Use rye
+
+This project now use [Rye](https://rye.astral.sh/)
+to start with the project:
+
+```shell
+rye sync
+```
+
+to test :
+
+```shell
+rye test
+```
+
+to build python package (both sdist and wheel):
+
+```shell
+rye build
+```
+
+### Running tests [legacy method]
 To run the tests, first install the dev dependencies using
 
 ```bash
-pip3 install -r requirements-dev.txt
+pip3 install -r requirements.lock
+pip3 install -r requirements-dev.lock
 ```
 
 Then run the tests using

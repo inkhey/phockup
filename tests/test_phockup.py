@@ -7,9 +7,9 @@ from datetime import datetime
 
 import pytest
 
-from src.dependency import check_dependencies
-from src.exif import Exif
-from src.phockup import Phockup
+from phockup.internal.dependency import check_dependencies
+from phockup.internal.exif import Exif
+from phockup.internal.phockup import Phockup
 
 os.chdir(os.path.dirname(__file__))
 
